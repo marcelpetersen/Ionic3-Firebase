@@ -9,7 +9,9 @@
 
 <ion-content padding>
   Message: {{ message}}
-  <ion-input type = "text" [(ngModel)] = "name" placeholder="put text here"></ion-input>
+  <ion-item>
+    <ion-input type = "text" [(ngModel)] = "name" placeholder="put text here"></ion-input>
+  </ion-item>
   <button ion-button (click)="startNotify()">Start notification</button> 
   <button ion-button (click)="callPingPong()">Call cloud function</button> 
   Status of call pingpong function is: {{ output }}

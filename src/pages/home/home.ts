@@ -49,19 +49,19 @@ export class HomePage {
   }
 
   public navigationPushPop() {
-    this.navCtrl.setRoot('NavigationPushpopPage');
+    this.navCtrl.push('NavigationPushpopPage');
   }
 
   public navigationModal() {
-    this.navCtrl.setRoot('NavigationModalPage');
+    this.navCtrl.push('NavigationModalPage');
   }
 
   public navigationPopover() {
-    this.navCtrl.setRoot('NavigationPopoverPage');
+    this.navCtrl.push('NavigationPopoverPage');
   }
 
   public tabs() {
-    this.navCtrl.setRoot('TabsPage');
+    this.navCtrl.push('TabsPage');
   }
 
   public dataBinding() {
