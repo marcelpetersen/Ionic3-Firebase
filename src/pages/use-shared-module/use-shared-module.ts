@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
 import { TranslateService } from '@ngx-translate/core';
 import { Storage } from '@ionic/storage';
 
@@ -11,7 +11,7 @@ import { Storage } from '@ionic/storage';
 export class UseSharedModulePage {
   public subject: string;
 
-  constructor(public translateService: TranslateService, public storage: Storage) {
+  constructor(public translateService: TranslateService, public storage: Storage, public navController: NavController) {
 
   }
 
@@ -30,4 +30,7 @@ export class UseSharedModulePage {
     });
   }
 
+  goToHome() {
+    this.navController.setRoot('HomePage');
+  }
 }

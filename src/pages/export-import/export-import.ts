@@ -8,12 +8,14 @@ import * as math from "../../libs/math"
   templateUrl: 'export-import.html',
 })
 export class ExportImportPage {
+  text: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log("2π = " + math.sum(math.pi, math.pi));
+    this.text = "2π = " + math.sum(math.pi, math.pi);
   }
 
 }

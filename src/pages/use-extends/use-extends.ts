@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
 import { Base } from '../../libs/base';
 
 @IonicPage()
@@ -10,7 +10,7 @@ import { Base } from '../../libs/base';
 export class UseExtendsPage extends Base {
   public subject: string;
 
-  constructor() {
+  constructor(public navController: NavController) {
     super();
   }
 
@@ -24,4 +24,7 @@ export class UseExtendsPage extends Base {
     Base.changeLanguage(language);
   }
 
+  goToHome() {
+    this.navController.setRoot('HomePage');
+  }
 }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage } from 'ionic-angular';
+import { IonicPage, LoadingController } from 'ionic-angular';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Http, Headers, URLSearchParams } from '@angular/http';
 import 'rxjs/add/operator/map';
@@ -15,7 +15,8 @@ export class DataSubmitToServerPage {
   profile: Profile = new Profile();
 
   constructor(public formBuilder: FormBuilder,
-    public http: Http) {
+    public http: Http,
+    public loadingController: LoadingController) {
     this.profileForm = this.formBuilder.group({
       name: [''],
       address: ['']
@@ -24,14 +25,19 @@ export class DataSubmitToServerPage {
   }
 
   saveProfile() {
-    this.saveToServer().then((profile: Profile) => {
-      this.profile = profile;
-      this.refreshFormData();
+    let loading = this.loadingController.create();
+    loading.present().then(() => {
+      this.saveToServer().then((profile: Profile) => {
+        this.profile = profile;
+        this.refreshFormData();
+        loading.dismiss();
+      });
     });
   }
 
   saveToServer() {
     return new Promise(resolve => {
+
       let body = new URLSearchParams();
       body.set('name', this.profileForm.get('name').value);
       body.set('address', this.profileForm.get('address').value);
@@ -44,12 +50,13 @@ export class DataSubmitToServerPage {
         .subscribe(profile => {
           resolve(profile);
         });
-    })
+    });
+
   }
 
   refreshFormData() {
-      this.profileForm.controls["name"].setValue(this.profile['name']);
-      this.profileForm.controls["address"].setValue(this.profile['address']);
+    this.profileForm.controls["name"].setValue(this.profile['name']);
+    this.profileForm.controls["address"].setValue(this.profile['address']);
   }
 
 }
