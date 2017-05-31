@@ -36,7 +36,7 @@ public loginForm: FormGroup;
       firebase.auth().signInWithEmailAndPassword(this.loginForm.value.email, this.loginForm.value.password)
         .then(() => {
           loading.dismiss().then(() => {
-            this.navCtrl.setRoot('HomePage');
+            this.navCtrl.pop();
           });
         }, (error) => {
           loading.dismiss().then(() => {
