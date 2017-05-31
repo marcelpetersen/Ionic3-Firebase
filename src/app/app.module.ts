@@ -24,6 +24,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { Camera } from "@ionic-native/camera";
 import { BarcodeScanner } from "@ionic-native/barcode-scanner";
 import { Firebase } from '@ionic-native/firebase';
+import { Geolocation } from "@ionic-native/geolocation";
 
 export function createTranslateLoader(http: Http) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -74,7 +75,8 @@ export function createTranslateLoader(http: Http) {
 
     Camera,
     BarcodeScanner,
-    Firebase
+    Firebase,
+    Geolocation
   ]
 })
 export class AppModule {}
