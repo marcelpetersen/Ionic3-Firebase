@@ -6,13 +6,26 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>firebase-authen</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>Firebase Authentication</ion-title>
+    </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
+    <ion-list>
+        <ion-item>
+            <authen-info></authen-info>
+        </ion-item>
+        <ion-item (click)="loginAnonymous()">
+            Login Anonymous!
+        </ion-item>
+        <ion-item>
+            Login with Email!
+        </ion-item>
+        <ion-item>
+            Login with Facebook!
+        </ion-item>
+    </ion-list>
 </ion-content>

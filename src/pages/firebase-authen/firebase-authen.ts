@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, LoadingController } from 'ionic-angular';
+import firebase from "firebase";
 
 /**
  * Generated class for the FirebaseAuthenPage page.
@@ -14,11 +15,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class FirebaseAuthenPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public loadingCtrl: LoadingController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad FirebaseAuthenPage');
   }
 
+  loginAnonymous() {
+    const loading = this.loadingCtrl.create();
+    loading.present();
+    firebase.auth().signInAnonymously().then(()=>{
+      loading.dismiss();
+    });
+  }
 }
