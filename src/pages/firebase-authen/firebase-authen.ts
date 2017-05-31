@@ -29,4 +29,8 @@ export class FirebaseAuthenPage {
       loading.dismiss();
     });
   }
+
+  loginEmail() {
+    this.navCtrl.push('LoginEmailPage');
+  }
 }
