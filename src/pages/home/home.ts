@@ -173,4 +173,20 @@ export class HomePage {
   public algoliaSearch() {
     this.navCtrl.push('AlgoliaDemoPage');
   }
+
+  public googleMaps() {
+    this.navCtrl.push('GoogleMapsPage');
+  }
+
+  public firebaseAuthen() {
+    this.navCtrl.push('FirebaseAuthenPage');
+  }
+
+  public firebaseDatabase() {
+    this.navCtrl.push('FirebaseDatabasePage');
+  }
+
+  public firebaseStorage() {
+    this.navCtrl.push('FirebaseStoragePage');
+  }
 }
