@@ -6,13 +6,16 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>google-maps</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>Google Maps</ion-title>
+    </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
-
+<ion-content nopadding>
+    <div #map id="map"></div>
+    <div class="myLocation" (click)="setCurrentLocation()">
+        <ion-icon name="locate" fixcara-main-color></ion-icon>
+    </div>
 </ion-content>
