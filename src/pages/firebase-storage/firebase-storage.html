@@ -6,13 +6,23 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>firebase-storage</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>Firebase Storage</ion-title>
+    </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
+    <button ion-button icon-left (click)="goToAuthen()" block *ngIf="!currentUser">
+      <ion-icon name="person"></ion-icon>
+      Please login.
+    </button>
+    <div *ngIf="currentUser">
+        <button *ngIf="isCordova" ion-button icon-left block small (click)="addImage()">
+          <ion-icon name="add"> Add new photo</ion-icon>
+        </button>
+        <p *ngIf="!isCordova">Add more picture only available on mobile.</p>
+        <img ion-img *ngFor="let photo of photos" [src]="photo" alt="">
+    </div>
 </ion-content>
