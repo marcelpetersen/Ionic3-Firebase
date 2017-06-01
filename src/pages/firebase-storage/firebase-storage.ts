@@ -29,15 +29,16 @@ export class FirebaseStoragePage {
     });
     const unsubscribe = firebase.auth().onAuthStateChanged(user => {
       this.currentUser = user;
-
-      let me = this;
-      firebase.database().ref(`/photos/${this.currentUser.uid}`)
-        .on('child_added', snapShot => {
-          console.log('child add: ', JSON.stringify(snapShot));
-          me.zone.run(() => {
-            me.photos.push(snapShot.val());
+      if (this.currentUser) {
+        let me = this;
+        firebase.database().ref(`/photos/${this.currentUser.uid}`)
+          .on('child_added', snapShot => {
+            console.log('child add: ', JSON.stringify(snapShot));
+            me.zone.run(() => {
+              me.photos.push(snapShot.val());
+            });
           });
-        });
+      }
       unsubscribe();
     });
   }
