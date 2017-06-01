@@ -16,17 +16,19 @@ export class TranslationPage {
   }
 
   ionViewDidLoad() {
-    this.translateService.use(this.translateService.currentLang);
-    this.translateService.get('Ionic3_and_Firebase').subscribe(value => {
-      this.subject = value;
+    this.translateService.onLangChange.subscribe(ev => {
+      this.translateService.get('Ionic3_and_Firebase').subscribe(value => {
+        this.subject = value;
+      });
     });
+    this.translateService.use(this.translateService.currentLang);
   }
 
   changeLanguage(language: string) {
-    this.translateService.use(language); 
+    this.translateService.use(language);
     this.storage.ready().then(() => {
       this.storage.set('currentLanguage', language);
-      window.location.reload();
+      //window.location.reload();
     });
   }
 
