@@ -15,8 +15,10 @@ export class UseExtendsPage extends Base {
   }
 
   ionViewDidLoad() {
-    this.translateService.get('Ionic3_and_Firebase').subscribe(value => {
-      this.subject = value;
+    this.translateService.onLangChange.subscribe(() => {
+      this.translateService.get('Ionic3_and_Firebase').subscribe(value => {
+        this.subject = value;
+      });
     });
   }
 

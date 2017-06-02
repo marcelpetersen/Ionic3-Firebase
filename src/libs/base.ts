@@ -21,7 +21,7 @@ export class Base {
         Base._translateService.use(language);
         Base._storage.ready().then(() => {
             Base._storage.set('currentLanguage', language);
-            window.location.reload();
+            //window.location.reload();
         });
     }
 }
