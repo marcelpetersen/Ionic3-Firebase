@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>1015604298121-0qnj2v0r6gpaqhppc12muhbj283tu7p8.apps.googleusercontent.com</string>
+	<string>680123526449-eoreo23v7qpfuhv7cjmb1u2k0dtd5q79.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.1015604298121-0qnj2v0r6gpaqhppc12muhbj283tu7p8</string>
+	<string>com.googleusercontent.apps.680123526449-eoreo23v7qpfuhv7cjmb1u2k0dtd5q79</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCYfkotyeGQ3pgkxG6BV3udPB3TsC3FzU0</string>
+	<string>AIzaSyAzSWDX1Ivss51RicmjdTvQLFR8tXKegDc</string>
 	<key>GCM_SENDER_ID</key>
-	<string>1015604298121</string>
+	<string>680123526449</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.actvee.ionic3firebase</string>
+	<string>info.actvee.ionic3firebase</string>
 	<key>PROJECT_ID</key>
-	<string>ijourneykeep</string>
+	<string>ionic3firebase</string>
 	<key>STORAGE_BUCKET</key>
-	<string>ijourneykeep.appspot.com</string>
+	<string>ionic3firebase.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:1015604298121:ios:3a7d7980f37fae85</string>
+	<string>1:680123526449:ios:981c896c8ffaf3c4</string>
 	<key>DATABASE_URL</key>
-	<string>https://ijourneykeep.firebaseio.com</string>
+	<string>https://ionic3firebase.firebaseio.com</string>
 </dict>
 </plist>
