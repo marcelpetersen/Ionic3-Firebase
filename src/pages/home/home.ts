@@ -189,4 +189,8 @@ export class HomePage {
   public firebaseStorage() {
     this.navCtrl.push('FirebaseStoragePage');
   }
+
+  public chart() {
+    this.navCtrl.push('ChartPage');
+  }
 }
