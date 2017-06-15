@@ -193,4 +193,13 @@ export class HomePage {
   public chart() {
     this.navCtrl.push('ChartPage');
   }
+
+  public uploadFilePage() {
+    this.navCtrl.push('UploadFilePage');
+  }
+
+  public uploadImagePage() {
+    this.navCtrl.push('UploadImagePage');
+  }
+  
 }
